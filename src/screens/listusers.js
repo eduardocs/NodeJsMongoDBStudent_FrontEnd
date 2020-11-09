@@ -16,13 +16,14 @@ import {
   Button,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import Menu from '../components/menu/menu.js'
 
 const divStyle = {
   width: "25rem",
   margin: "20px",
 };
 
-class ListUsers extends React.Component {
+class ListUsers extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,6 +45,7 @@ class ListUsers extends React.Component {
     return (
       <Fragment>
         <Container fluid>
+          <Menu />
           <Row>
             <Col>
               {this.state.users.map((user) => (
